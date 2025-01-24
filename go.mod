@@ -1,4 +1,4 @@
-module github.com/hashicorp/terraform-provider-scaffolding-framework
+module github.com/open-southeners/terraform-provider-laravel-vapor
 
 go 1.22.7
 

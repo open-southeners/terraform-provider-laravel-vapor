@@ -1,0 +1,18 @@
+terraform {
+  required_providers {
+    laravelvapor = {
+      source  = "terraform.local/local/laravelvapor"
+      version = "1.0.0"
+    }
+  }
+}
+
+provider "laravelvapor" {
+  token = "eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiIxIiwianRpIjoiNmI0MjllMTM4OGI5OTIwODI3NzQ4YzhkMjdiNDkxY2M5Y2QzNmFlYWUzMTRhZjNiOTIyNWQ5NjEyNzE2NzVmZjJhZTZkOWUxYjA1MTIwOTEiLCJpYXQiOjE3Mzc0ODc0MTkuMTAyODg4LCJuYmYiOjE3Mzc0ODc0MTkuMTAyODkxLCJleHAiOjE4OTUyNTM4MTkuMDk1NzY4LCJzdWIiOiIxOTg3MCIsInNjb3BlcyI6WyIqIl19.TGJ-r3xcYYrY3s4VB9oHqu7cSnA7iN4BCZmpuj5bj-tqVNVa8HkvP5OZ5jI4hWACehFK1e6HqPJo3aR-UywYBtC-cUf7ehZAJ4oJyMKozSvtetpUKwFzfsI4ptaFLh5jMxdxsJN-5kNWEPgjSwbl5c2-qrzrhxkF7ERj5-PEr7nTGPxRpH2byB62ksS7KM_S4pDxU8vZBMNEuilMV0lvHu1bYW9hhMpoPwZQtVoW1D8VSw81Ymg9zhXXpmm6l-HvUXTgwuMzWfMbrvkmsq44vuMX9uZfaJQ63kYgZduBfQGVuVC0tm0XXW8l_VbhFwPJdRXhRaJ3AyysF2vUF0Yt_x7mefr8IIwOsbWQVaasshhMwz5pV-gI4m41_HLFYRjFszzqHpxTQh0bXImUah-z3p3d2xmyWN804M2JJO5TkTsLEaVbAHPx2JEEu3mOvXGutAxJA9ts8AT7Xao6azz9CnloOOaUXikJbDDH1BJQu_SJlgh7UXuu_Pg_SvNo074jnuKYBjxq4Dmezi0PlQjPVXsHurGM7ImPgD3TLPiCn5RUnqIoDJOB-FP51TOWj_yzxy0njII4U2pTk5xapIkJ97deg1Ma4Ql4NvLZBeyOKqnfYfKSxdVlpecWIIrUUMbLr8ICk8GsTwxrvmjj5njYsjBoj9pMIC7eYoTSVbGvLJA"
+}
+
+data "laravelvapor_account" "me" {}
+
+output "test_account_id" {
+  value = data.laravelvapor_account.me.id
+}
